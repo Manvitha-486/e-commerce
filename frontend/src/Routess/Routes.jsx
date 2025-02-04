@@ -1,3 +1,3 @@
-import LoginPage from "./loginpage";
+import LoginPage from "../Path/loginpage"
 
 export {LoginPage}
