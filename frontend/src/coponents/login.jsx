@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 const Login = () => {
-    const [email,setEmail]=useState('')
+    const [email,setEmail]=useState('')   //state to store email value  
   return (
     <div className='h-screen flex justify-center items-center bg-gray-100'>
       <div className='box-border flex flex-col bg-slate-200 h-96 w-96 shadow-xl shadow-black-600 rounded-xl '>
