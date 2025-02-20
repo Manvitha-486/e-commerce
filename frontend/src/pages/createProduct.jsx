@@ -92,6 +92,7 @@ function CreateProduct() {
         <div>
           <label className="block font-medium">Category</label>
           <select
+          type="String"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="border p-2 w-full rounded"
