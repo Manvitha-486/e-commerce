@@ -1,6 +1,7 @@
 const app =require('./app')
 const connectDb=require('./db/db')
 
+
 /*process: In Node.js, process is a global object that provides information about the current process running the application (like its environment, runtime, and status).
 uncaughtException: This is an event in Node.js that is triggered when an uncaught error occurs—meaning an error that wasn't caught by any try/catch block or error handler.*/
 /*
