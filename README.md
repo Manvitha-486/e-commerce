@@ -1,48 +1,50 @@
-Project Name:E-commerce
+milestone 1
+folder creation and github push
 
-Project Structure
-Frontend (React or Angular)
-The frontend is built using either React (for MERN) or Angular (for MEAN). It includes the following folders:
-Tech-Stack:
-Frontend-HTML,CSS,React
-Backend-MongoDB,Express,Node.JS
+mileston 2
+login page frontend created
 
-components
-pages
-router
+milestone 3
+server.js backend setup
 
-Backend (Node.js with Express)
-The backend is built with Node.js and Express and is structured as follows:
-models
-routers
-controllers
-config
-server.js
-db
+milestone 4
+sign up frontend created
 
-Milestone 1: Project Overview
-In this milestone, we:
-Understood the overall structure of a MERN project.
-Learned the foundational steps of setting up a new project.
-Explored key functionalities of an e-commerce application, such as:
-User Authentication: Secure login and registration.
-This milestone focused on preparing the foundation for upcoming project stages by setting up the repository and understanding the application's goals and features.
+milestone 5
+user schema, signup post route created
 
-E-Commerce App - Milestone 2 
-This milestone sets up the frontend with React and Tailwind CSS, and the backend with Node.js.
-The project follows a structured folder hierarchy with separate frontend and backend directories.
-The first user-facing feature, the Login Page, has been built with functionality and styling.
-Check the repository for the complete setup and progress.
+milestone 6
+login route created
 
-E-Commerce App - Milestone 3 
-This milestone establishes the backend using Node.js, Express, and MongoDB.
-A structured folder hierarchy is implemented with routes, controllers, models, and middleware.
-The server is configured to handle API requests and connect to MongoDB for data storage.
-Basic error handling is added to improve debugging and user experience.
+milestone 7
+home page created
 
-E-Commerce App - Milestone 4 
-This milestone introduces user management and file uploads in the backend.
-A User Model is created using MongoDB schemas to structure user data.
-A User Controller is implemented to handle user-related requests like registration and retrieval.
-Multer is configured to enable file uploads, allowing users to store images on the server.
-The project repository is updated with these features and documented in the README.
+milestone 8
+product page creating
+
+milestone 9
+product schema creating, product post route
+
+milestone 10
+dynamic image displaying frontend
+
+milestone 11
+dynamic image display backend
+
+milestone 12
+my product page crud fronted
+
+milestone 13 , 14
+my product crud backend
+
+milestone 15
+navbar
+
+milestone 16
+product Detail page created
+
+milestone 17
+updated product and user schema with cart. created add to cart route and updated product detail page.
+
+milestone 18
+created an endpoint to display the products into the cart.
