@@ -1,34 +1,39 @@
-const multer=require('multer')
-const path=require('path')
-
-const storage=multer.diskStorage({
-    destination:(req,file,cb)=>{
-cb(null,'uploads/')//cb(throw new err,null)
+const multer = require('multer')
+const path = require('path');  // Import the path module
+const fs = require('fs');
+const uploadDir = path.join(__dirname, '../products'); // Adjust based on your project structure
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true }); // Create the directory if it doesn't exist
+}
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/');
     },
-    filename:(req,file,cb)=>{
-     const uniqueSuffix=Date.now()+Math.round(ModifiedPathsSnapshot.random()*1e9) //e=0,9=no of 0's.  //image.png-->[image,png]
-     const filename=file.originalname.split('.')[0] //image
-     const fileExtention=path.extname(file.originalname)
-     cb(null,filename+ '-'+ uniqueSuffix +fileExtention) //image+ghdyw789.png  //fileextention allows u to take the image in any form
+    filename: (req, file, cb) => {
+        const uniSuffix = Date.now() + Math.round(Math.random() * 1e9);
+        const fileName = file.originalname.split('.')[0];  // Get the base name of the file
+        const fileExtension = path.extname(file.originalname);  // Get the file extension
+        cb(null, uniSuffix + fileName + fileExtension);  // Preserve original extension
+    }
+});
+const pstorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadDir);
+    },
+    filename: (req, file, cb) => {
+        const uniSuffix = Date.now() + Math.round(Math.random() * 1e9);
+        const fileName = file.originalname.split('.')[0];  // Get the base name of the file
+        const fileExtension = path.extname(file.originalname);  // Get the file extension
+        cb(null, uniSuffix + fileName + fileExtension);  // Preserve original extension
     }
 });
 
-const pstorage=multer.diskStorage({
-    destination:(req,file,cb)=>{
-cb(null,uploadDir)//cb(throw new err,null)
-    },
-    filename:(req,file,cb)=>{
-     const uniqueSuffix=Date.now()+Math.round(ModifiedPathsSnapshot.random()*1e9) //e=0,9=no of 0's.  //image.png-->[image,png]
-     const filename=file.originalname.split('.')[0] //image
-     const fileExtention=path.extname(file.originalname)
-     cb(null,filename+ '-'+ uniqueSuffix +fileExtention) //image+ghdyw789.png  //fileextention allows u to take the image in any form
-    }
-});
+
+
+
+
 const pupload = multer({storage:pstorage})
 
 const upload = multer({ storage: storage });
 
 module.exports = {upload,pupload};
-
-
-//dependecy we install....it is used to store files   and for disk storage

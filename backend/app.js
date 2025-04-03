@@ -1,19 +1,32 @@
-const express=require('express')
-const ErrorHandler=require('../utils/ErrorHandler')
-const user=require('./controls/user')
-const cors=require('cors')
-const app=express();
+const express = require('express')
+const ErrorHandler = require('./middleware/error')
+const app = express()
+const cookieParser = require('cookie-parser')
+const cors = require('cors')
+const path = require('path');
+
+app.use(cors({
+    origin: 'http://localhost:5174',
+    credentials: true
+  }))
+app.use(express.json())
+app.use(cookieParser())
+app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+app.use('/products', express.static(path.join(__dirname, '../products')));
 
 
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({extended:true})) ///to need the url we use urlencoded.
-
-if(process.env.NODE_ENV!=='PRODUCTION'){
-require('dotenv').config({path:'backend/config/.env'})
+if(process.env.NODE_ENV!=="PRODUCTION"){
+    require('dotenv').config({path:"backend/config/env"})
 }
 
-app.use('/api',user)
+
+//routes
+const user = require('./controller/user')
+const product= require('./controller/product')
+
+ app.use('/api/user',user)
+app.use('/api/product',product)
+
 app.use(ErrorHandler)
-module.exports=app;
+module.exports=app
