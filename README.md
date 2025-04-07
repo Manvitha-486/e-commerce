@@ -75,3 +75,9 @@ created a backend endpoint to place order.
 
 # milestone 27
 created a frontend page for my orders.
+
+# milestone 28
+added cancel button in my-orders and create an backend endpoint to cancel order.
+
+# milestone 29
+learned how to add online payment gateway to our application using Paypal api.

@@ -1,10 +1,13 @@
+
 import React from 'react'
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { NavLink , Routes, Route} from 'react-router-dom'
+
 const Nav = () => {
 
   return (
+
     <nav className='flex justify-evenly'>
      <NavLink to={'/'} >
 
@@ -21,8 +24,9 @@ const Nav = () => {
      <FaCartArrowDown />
      </NavLink>
       
-    </nav>
-  )
-}
 
+
+</nav>
+)
+}
 export default Nav

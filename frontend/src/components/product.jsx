@@ -23,6 +23,7 @@ console.log(currentImage,"8888")
   className="w-full h-56 object-cover rounded-lg mb-2"
 />
 
+
         <h2 className="text-lg font-bold">{name}</h2>
         <p className="text-sm opacity-75 mt-2">{description}</p>
       </div>
@@ -31,6 +32,7 @@ console.log(currentImage,"8888")
         <button onClick={()=>navigate(`/product/${_id}`)} className="w-full text-white px-4 py-2 rounded-md bg-neutral-900 hover:bg-neutral-700 transition duration-300">
           More Info
         </button>
+
       </div>
     </div>
   );
