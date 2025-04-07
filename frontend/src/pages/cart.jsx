@@ -1,4 +1,6 @@
 
+
+
 import CartProduct from '../components/CartProduct'
 import Nav from '../components/nav';
 import { useState, useEffect } from 'react';
@@ -54,4 +56,6 @@ const navigate= useNavigate()
         </div>
     );
 }
+
 export default Cart;
+
