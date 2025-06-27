@@ -87,3 +87,15 @@ added online payment gateway to our application using PayPal API. This is an con
 
 # milestone 31
 implemented global state management using Redux.
+
+# milestone 32
+added the mail to the global state that was created earlier and access the mail in all pages.
+
+# milestone 33
+created a JWT token and stored them inside an cookie.
+
+# milestone 34
+validated JWT token that was stored while inside cookie.
+
+# milestone 35
+deployed project
